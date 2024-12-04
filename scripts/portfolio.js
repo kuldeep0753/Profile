@@ -25,29 +25,56 @@ let hamburger = "assets/images/hamburger.svg";
 let navBar = document.querySelector(".navbar");
 let hideNav = document.querySelector(".nav-item");
 
-window.addEventListener("resize", addHamburger);
+window.addEventListener("resize" || "load", addHamburger);
+
+//Call when page load default
+addHamburger();
 
 function addHamburger() {
+  // show/hide element
+  if (window.innerWidth < 600) {
+    hideNav.style.display = "none";
+  } else {
+    hideNav.style.display = "block";
+  }
+
   let existingHamburger = document.getElementById("hamburger-icon");
   if (window.innerWidth < 600) {
     if (!existingHamburger) {
-      let imgEle = document.createElement("img");
-      //   console.log(typeof(imgEle))
-      imgEle.src = hamburger;
-      imgEle.id = "hamburger-icon";
-      navBar.appendChild(imgEle);
-      console.log("trigger");
+        createHamburgerImg()
+        
+      let selectImgId = document.querySelector("#hamburger-icon");
+      selectImgId.addEventListener("click", () => {
+        hideNav.style.display = "block";
+      });
     }
   } else {
     if (existingHamburger) {
       existingHamburger.remove();
     }
   }
-  // show/hide element
-  let hideNav = document.querySelector(".nav-item");
-  if (window.innerWidth < 600) {
-    hideNav.style.display = "none";
-  } else {
-    hideNav.style.display = "block";
-  }
+}
+function createHamburgerImg(){
+    let imgEle = document.createElement("img");
+    imgEle.src = hamburger;
+    imgEle.id = "hamburger-icon";
+    navBar.appendChild(imgEle);
+    console.log("trigger");
+}
+
+let click_Hamburger = document.getElementById("hamburger-icon");
+let flag= true;
+click_Hamburger.addEventListener("click", clickHamburger);
+function clickHamburger() {
+    if(flag){
+        console.log("open");
+        hideNav.style.display = "block";
+        flag = false;
+    }
+    else{
+        console.log("close");
+        hideNav.style.display = "none";
+        flag = true;
+    }
+    
 }
