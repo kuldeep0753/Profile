@@ -1,5 +1,5 @@
 "use strict";
-// alert("Hi! Welcome to my portfolio");
+
 let toggleDay = document.querySelector(".day-night");
 let nightImagePath = "assets/images/night.svg";
 let dayImagePath = "assets/images/sun.svg";
@@ -25,7 +25,11 @@ let hamburger = "assets/images/hamburger.svg";
 let navBar = document.querySelector(".navbar");
 let hideNav = document.querySelector(".nav-item");
 
-window.addEventListener("resize" || "load", addHamburger);
+//Show and hide cross button
+let closeBtn = document.querySelector(".top-close-accordian");
+closeBtn.style.display = "none";
+
+window.addEventListener("resize", addHamburger);
 
 //Call when page load default
 addHamburger();
@@ -41,11 +45,21 @@ function addHamburger() {
   let existingHamburger = document.getElementById("hamburger-icon");
   if (window.innerWidth < 600) {
     if (!existingHamburger) {
-        createHamburgerImg()
-        
+      createHamburgerImg();
+
       let selectImgId = document.querySelector("#hamburger-icon");
-      selectImgId.addEventListener("click", () => {
+      //Click event on Hamburger
+      selectImgId.addEventListener("click", function clickHamburger() {
+        console.log("open");
         hideNav.style.display = "block";
+        closeBtn.style.display = "block";
+        selectImgId.style.display = "none";
+      });
+      closeBtn.addEventListener("click", () => {
+        console.log("close");
+        hideNav.style.display = "none";
+        selectImgId.style.display = "block";
+        closeBtn.style.display = "none";
       });
     }
   } else {
@@ -54,27 +68,12 @@ function addHamburger() {
     }
   }
 }
-function createHamburgerImg(){
-    let imgEle = document.createElement("img");
-    imgEle.src = hamburger;
-    imgEle.id = "hamburger-icon";
-    navBar.appendChild(imgEle);
-    console.log("trigger");
-}
 
-let click_Hamburger = document.getElementById("hamburger-icon");
-let flag= true;
-click_Hamburger.addEventListener("click", clickHamburger);
-function clickHamburger() {
-    if(flag){
-        console.log("open");
-        hideNav.style.display = "block";
-        flag = false;
-    }
-    else{
-        console.log("close");
-        hideNav.style.display = "none";
-        flag = true;
-    }
-    
+//Creating image tag
+function createHamburgerImg() {
+  let imgEle = document.createElement("img");
+  imgEle.src = hamburger;
+  imgEle.id = "hamburger-icon";
+  navBar.appendChild(imgEle);
+  console.log("trigger");
 }
