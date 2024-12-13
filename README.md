@@ -195,11 +195,141 @@ The `<meta name="viewport">` tag ensures the webpage is mobile-friendly by contr
 
 ---
 
-## Contribution
-Feel free to open issues or submit pull requests for improvements or additional features.
+<!-- CSS documentation -->
+
+# CSS Documentation
+
+This README outlines the key CSS concepts implemented in the code and serves as a reference for understanding the various styles applied.
 
 ---
 
-## License
-This project is licensed under the MIT License.
+## Concepts Covered
+
+### 1. **Selectors and Specificity**
+- Targets specific HTML elements for styling.
+```css
+body {
+  margin: 0;
+}
+h1 > span {
+  color: #391cbe;
+}
+```
+
+### 2. **Typography**
+- Customizes font styles, alignment, and colors.
+```css
+body {
+  font-family: "Inter", sans-serif;
+  color: #333;
+}
+h1, h2, h3 {
+  text-align: center;
+}
+```
+
+### 3. **Box Model**
+- Manages margins, padding, borders, and shadows.
+```css
+.project {
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+```
+
+### 4. **Flexbox**
+- Enables flexible layouts and alignment.
+```css
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+```
+
+### 5. **Media Queries**
+- Provides responsive styling for various screen sizes.
+```css
+@media (min-width: 600px) {
+  .navbar {
+    flex-direction: row;
+  }
+}
+```
+
+### 6. **Navigation Bar Styling**
+- Sticky navbar with hover effects for links.
+```css
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #8c93e5;
+  color: #fff;
+}
+.nav-links li a:hover {
+  background-color: #575757;
+}
+```
+
+### 7. **Transitions**
+- Adds smooth effects for state changes.
+```css
+.nav-links li a {
+  transition: background 0.3s;
+}
+```
+
+### 8. **Responsive Design**
+- Ensures proper layout on devices of different sizes.
+```css
+@media (min-width: 1024px) {
+  .projects {
+    gap: 30px;
+    justify-content: center;
+  }
+}
+```
+
+### 9. **Colors and Backgrounds**
+- Applies color schemes and background settings.
+```css
+body {
+  background-color: white;
+  color: #333;
+}
+.navbar {
+  background-color: #8c93e5;
+}
+```
+
+### 10. **Images**
+- Ensures responsive and accessible image styling.
+```css
+.day-night {
+  width: 100px;
+  max-width: 40px;
+}
+```
+
+### 11. **Footer Styling**
+- Provides a consistent and styled footer.
+```css
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #8c93e5;
+  color: #fff;
+}
+```
+
+---
+
+## Conclusion
+The code demonstrates foundational CSS techniques, including typography, the box model, responsive design, Flexbox, and transitions. These concepts lay the groundwork for mastering CSS. Further exploration of Grid, animations, and custom properties is recommended for advanced styling.
 
