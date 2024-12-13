@@ -1,72 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./styles/index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
     <!-- Navbar -->
     <header class="navbar">
-        <div class="logo">My Portfolio</div>
-        <img class="top-close-accordian" src="./assets/images/cross.svg">
-        <nav class="nav-item">
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><img src="./assets/images/sun.svg" class="day-night" alt="not load"></li>
-            </ul>
-        </nav>
+      <div class="logo">My Portfolio</div>
+      <img class="top-close-accordian" src="./assets/images/cross.svg" />
+      <nav class="nav-item">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#technology">Technologies</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <img
+              src="./assets/images/moon.svg"
+              class="day-night"
+              alt="not load"
+            />
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Home Section -->
-    <section id="home" class="section">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I’m Kuldeep Singh , a passionate web developer.</p>
+    <section class="section" id="home">
+      <div class="main-image">
+        <img
+          src="./assets/images/main-image.svg"
+          alt="not loaded"
+          width="200"
+        />
+      </div>
+      <h1><span>Kuldeep Singh</span> the Web Devleoper🚀</h1>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>I specialize in creating clean and functional websites by using HTML5, CSS3, and Javascript</p>
+      <h2>About Me</h2>
+      <p>
+        Hi, I’m <strong>Kuldeep</strong>, a passionate web developer.
+        Results-driven professional with <strong>~3 years</strong> of experience
+        in designing and developing applications, managing projects, and
+        coordinating with clients, specializing as a
+        <strong>Front-End Developer (ReactJS)</strong>.
+      </p>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="section" id="technology">
+      <div class="container container-center">
+        <h2>Technologies</h2>
+        <p>
+          I'm familiar with HTML5, CSS3, Git, JavaScript, NodeJS, ReactJS, and
+          Web Hosting
+        </p>
+      </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of Project 1.</p>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of Project 2.</p>
-            </div>
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>Description of Project 3.</p>
-            </div>
-        </div>
+      <h2>Projects</h2>
+      <div class="projects">
+        <!-- render the projects details dynamically -->
+      </div>
     </section>
-
-    
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <p>Email: your-email@example.com</p>
-        <p>Phone: 123-456-7890</p>
+      <h2>Contact Me</h2>
+      <p>📫: <a href="kushwaha0753kuldeep@gmail.com">Message me😊</a></p>
+      <p>📞: (+91)-9886673612</p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 All rights reserved.</p>
+      <p>&copy; 2024 All rights reserved.</p>
     </footer>
     <script src="./scripts//portfolio.js"></script>
-</body>
+  </body>
 </html>
-
