@@ -136,7 +136,7 @@ footer {
 /* Desktop View (1024px and above) */
 @media (min-width: 1024px) {
   .navbar {
-    padding: 20px 40px;
+    padding: 0px 40px;
     flex-direction: row;
   }
 

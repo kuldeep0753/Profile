@@ -83,7 +83,7 @@ function createHamburgerImg() {
 const projects = [
     { title: "E-commerce-apnaBazar",link: "https://apnabazarhai.netlify.app/", description: "Apna Bazar is an e-commerce platform where users can log in, explore products, and make purchases." },
     { title: "Society Market",link: "https://society-market.netlify.app/", description: "E-commerce website with secure intergration of payment method" },
-    { title: "Music-PLayer",link: "https://ganabazado.netlify.app/", description: "Sing song for lighten the mood" },
+    { title: "Music-Player",link: "https://ganabazado.netlify.app/", description: "Sing song for lighten the mood" },
 ];
 
 const selectProjectList = document.querySelector(".projects");

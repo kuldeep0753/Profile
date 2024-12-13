@@ -6,14 +6,14 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Navbar -->
     <header class="navbar">
       <div class="logo">My Portfolio</div>
-      <img class="top-close-accordian" src="./assets/images/cross.svg" />
+      <img class="top-close-accordian" src="./assets/images/cross.svg" alt="cross sign not loaded" />
       <nav class="nav-item">
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
@@ -33,20 +33,18 @@
     </header>
 
     <!-- Home Section -->
-    <section class="section" id="home">
+    <section class="section" id="home" aria-labelledby="home-heading">
       <div class="main-image">
-        <img
-          src="./assets/images/main-image.svg"
-          alt="not loaded"
-          width="200"
-        />
+        <img src="./assets/images/main-image.svg" alt="Illustration of a developer" width="200" />
       </div>
-      <h1><span>Kuldeep Singh</span> the Web Devleoper🚀</h1>
+      <h1 id="home-heading">
+        <span>Kuldeep Singh</span> the Web Developer🚀
+      </h1>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
-      <h2>About Me</h2>
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
       <p>
         Hi, I’m <strong>Kuldeep</strong>, a passionate web developer.
         Results-driven professional with <strong>~3 years</strong> of experience
@@ -57,9 +55,9 @@
     </section>
 
     <!-- Technology Section -->
-    <section class="section" id="technology">
+    <section class="section" id="technology" aria-labelledby="technology-heading">
       <div class="container container-center">
-        <h2>Technologies</h2>
+        <h2 id="technology-heading">Technologies</h2>
         <p>
           I'm familiar with HTML5, CSS3, Git, JavaScript, NodeJS, ReactJS, and
           Web Hosting
@@ -68,18 +66,18 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
-      <h2>Projects</h2>
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
       <div class="projects">
         <!-- render the projects details dynamically -->
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
-      <h2>Contact Me</h2>
-      <p>📫: <a href="kushwaha0753kuldeep@gmail.com">Message me😊</a></p>
-      <p>📞: (+91)-9886673612</p>
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Me</h2>
+      <p>📫: <a href="mailto:kushwaha0753kuldeep@gmail.com">Message me😊</a></p>
+      <p>📞: <a href="tel:+919886673612">(+91)-9886673612</a></p>
     </section>
 
     <!-- Footer -->
