@@ -40,6 +40,7 @@ function addHamburger() {
     hideNav.style.display = "none";
   } else {
     hideNav.style.display = "block";
+    closeBtn.style.display="none";
   }
 
   let existingHamburger = document.getElementById("hamburger-icon");
