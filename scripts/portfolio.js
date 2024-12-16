@@ -36,15 +36,10 @@ addHamburger();
 
 function addHamburger() {
   // show/hide element
-  if (window.innerWidth < 600) {
-    hideNav.style.display = "none";
-  } else {
-    hideNav.style.display = "block";
-    closeBtn.style.display="none";
-  }
 
   let existingHamburger = document.getElementById("hamburger-icon");
   if (window.innerWidth < 600) {
+    hideNav.style.display = "none";
     if (!existingHamburger) {
       createHamburgerImg();
 
@@ -64,6 +59,8 @@ function addHamburger() {
       });
     }
   } else {
+    hideNav.style.display = "block";
+    closeBtn.style.display="none";
     if (existingHamburger) {
       existingHamburger.remove();
     }
