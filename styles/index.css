@@ -95,6 +95,25 @@ h1>span{
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.back-top{
+  position: fixed;
+  bottom: 89px;
+  right: 15px;
+  background-color: #8c93e5;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  display: none;
+  transition: opacity 0.3s;
+}
+
+.back-top:hover {
+  background-color: #127ae9;
+}
+
+
 /* Footer */
 footer {
   text-align: center;

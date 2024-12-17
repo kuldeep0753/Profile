@@ -104,3 +104,24 @@ projects.forEach(function projects(index){
  selectProjectList.appendChild(divEle);
 
 })
+
+//3.top to scroll
+const scrollToTop = document.querySelector(".back-top");
+// TODO: apply on window then only scroll listen else won't work
+window.addEventListener("scroll",function(){
+  // document.body.scrollTop > 200
+
+  if(window.scrollY > 300){
+    scrollToTop.style.display="block";
+  }
+  else{
+    scrollToTop.style.display="none";
+  }
+})
+
+scrollToTop.addEventListener('click',function(){ 
+  window.scrollTo({
+    top:100,
+    behaviour:"smooth"
+  })
+})
