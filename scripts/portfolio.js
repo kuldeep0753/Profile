@@ -1,8 +1,8 @@
 "use strict";
 
 let toggleDay = document.querySelector(".day-night");
-let nightImagePath = "assets/images/night.svg";
-let dayImagePath = "assets/images/sun.svg";
+let nightImagePath = "assets/images/moon.svg";
+let dayImagePath = "assets/images/sunny.svg";
 let commonStyle = document.querySelector("body").style;
 commonStyle.backgroundColor = "white";
 console.log(toggleDay);
@@ -11,11 +11,11 @@ toggleDay.addEventListener("click", function () {
   if (commonStyle.backgroundColor === "white") {
     commonStyle.backgroundColor = "black";
     commonStyle.color = "white";
-    this.src = nightImagePath;
+    this.src = dayImagePath;
   } else {
     commonStyle.backgroundColor = "white";
     commonStyle.color = "black";
-    this.src = dayImagePath;
+    this.src = nightImagePath;
   }
 });
 
@@ -36,15 +36,10 @@ addHamburger();
 
 function addHamburger() {
   // show/hide element
-  if (window.innerWidth < 600) {
-    hideNav.style.display = "none";
-  } else {
-    hideNav.style.display = "block";
-    closeBtn.style.display="none";
-  }
 
   let existingHamburger = document.getElementById("hamburger-icon");
   if (window.innerWidth < 600) {
+    hideNav.style.display = "none";
     if (!existingHamburger) {
       createHamburgerImg();
 
@@ -64,6 +59,8 @@ function addHamburger() {
       });
     }
   } else {
+    hideNav.style.display = "block";
+    closeBtn.style.display="none";
     if (existingHamburger) {
       existingHamburger.remove();
     }
@@ -78,3 +75,53 @@ function createHamburgerImg() {
   navBar.appendChild(imgEle);
   console.log("trigger");
 }
+
+//Projects rendering 
+const projects = [
+    { title: "E-commerce-apnaBazar",link: "https://apnabazarhai.netlify.app/", description: "Apna Bazar is an e-commerce platform where users can log in, explore products, and make purchases." },
+    { title: "Society Market",link: "https://society-market.netlify.app/", description: "E-commerce website with secure intergration of payment method" },
+    { title: "Music-Player",link: "https://ganabazado.netlify.app/", description: "Sing song for lighten the mood" },
+];
+
+const selectProjectList = document.querySelector(".projects");
+
+projects.forEach(function projects(index){
+ const divEle = document.createElement("div");
+ divEle.classList.add("project");
+ const headEle3 =document.createElement("h3");
+ 
+ const aEle = document.createElement("a");
+ aEle.href = index.link;
+ aEle.textContent = index.title;
+
+ headEle3.appendChild(aEle);
+
+ const pEle = document.createElement("p");
+ pEle.textContent = index.description;
+
+ divEle.appendChild(headEle3);
+ divEle.appendChild(pEle);
+ selectProjectList.appendChild(divEle);
+
+})
+
+//3.top to scroll
+const scrollToTop = document.querySelector(".back-top");
+// TODO: apply on window then only scroll listen else won't work
+window.addEventListener("scroll",function(){
+  // document.body.scrollTop > 200
+
+  if(window.scrollY > 300){
+    scrollToTop.style.display="block";
+  }
+  else{
+    scrollToTop.style.display="none";
+  }
+})
+
+scrollToTop.addEventListener('click',function(){ 
+  window.scrollTo({
+    top:100,
+    behaviour:"smooth"
+  })
+})
